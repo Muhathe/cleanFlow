@@ -14,36 +14,36 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-//        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().
-//                configure("hibernate.cfg.xml").build();
-//        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
-//        Session session = sessionFactory.openSession();
-//        session.beginTransaction();
-//
-//
-//        ProfileEntity profile = new ProfileEntity();
-//        profile.setIsm("Kimdir");
-//        profile.setEmail("kimdirov111@gmail.com");
-//        profile.setPhone("+998905558879");
-//        profile.setAge(19);
-//        profile.setBio("Java 9 soat 4 dan 6 gacha sessiyaa");
-//        profile.setBirthday(LocalDate.of(2026, 10, 7));
-//
-//        session.save(profile);
+        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().
+                configure("hibernate.cfg.xml").build();
+        SessionFactory sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
 
 
-//        Student student = new Student();
-//        student.setName("Islom Abdullayev");
-//        student.setAge(25);
-//        student.setAddress("Qarshi");
-//        session.save(student);
+        ProfileEntity profile = new ProfileEntity();
+        profile.setIsm("Kimdir");
+        profile.setEmail("kimdirov111@gmail.com");
+        profile.setPhone("+998905558879");
+        profile.setAge(19);
+        profile.setBio("Java 9 soat 4 dan 6 gacha sessiyaa");
+        profile.setBirthday(LocalDate.of(2026, 10, 7));
+
+        session.save(profile);
 
 
-//        session.getTransaction().commit();
-//        session.close();
-//        sessionFactory.close();
+        Student student = new Student();
+        student.setName("Akbar");
+        student.setAge(25);
+        student.setAddress("Qarshi");
+        session.save(student);
 
-        getAllProfile();
+
+        session.getTransaction().commit();
+        session.close();
+        sessionFactory.close();
+
+    //    getAllProfile();
 
     }
 
@@ -68,7 +68,7 @@ public class Main {
 
     }
 
-
+//comment
 
 
 
